@@ -1,0 +1,13 @@
+.ca-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.ca-heading {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  text-align: center;
+}

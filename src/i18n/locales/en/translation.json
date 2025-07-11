@@ -1,0 +1,43 @@
+{
+  "login": {
+    "title": "Login to ABCD",
+    "email": "Email",
+    "email-placeholder": "Enter your email",
+    "password": "Password",
+    "password-placeholder": "Enter your password",
+    "forgot-password": "Forgot password?",
+    "submit": "Login",
+    "google": "Continue with Google",
+    "noAccount": "Don’t have an account?",
+    "signup": "Sign up"
+  },
+  "errors": {
+    "auth/invalid-email": "Invalid email format.",
+    "auth/user-disabled": "This account has been disabled.",
+    "auth/user-not-found": "No account found with this email.",
+    "auth/wrong-password": "Incorrect password.",
+    "auth/missing-email": "Email is required.",
+    "auth/invalid-credential": "Invalid email or password.",
+    "auth/too-many-requests": "Too many attempts. Try again later.",
+    "email-required": "Enter your email to receive password reset link.",
+    "missing-fields": "Please enter both email and password.",
+    "default": "Something went wrong. Please try again."
+  },
+  "messages": {
+    "reset-link-sent": "Password reset email sent to your inbox."
+  },
+  "signup": {
+    "title": "Sign Up",
+    "email": "Email",
+    "email-placeholder": "Enter your email",
+    "password": "Password",
+    "password-placeholder": "Enter your password",
+    "forgot-password": "Forgot password?",
+    "button": "Sign Up",
+    "google": "Continue with Google",
+    "no-account": "Don’t have an account?",
+    "signup": "Sign up",
+    "back":"Go To Login"
+  }
+}
+

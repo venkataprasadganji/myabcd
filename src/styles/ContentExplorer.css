@@ -1,0 +1,344 @@
+/* UpscContent.css */
+
+/* Main container styles */
+.upsc-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Tabs styling */
+.subject-tabs {
+  background: var(--surface);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.tab-content{
+
+display: none;
+
+}
+.custom-tab-nav .nav-link {
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-right: 1rem;
+  border: none;
+  background: none;
+}
+
+.custom-tab-nav .nav-link.active {
+  font-weight: 600;
+  color: var(--primary);
+ /* border-bottom: 2px solid var(--primary);*/
+}
+
+/* Layout below tabs */
+.upsc-content-layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 280px;
+  background: var(--surface);
+  padding: 1rem;
+  border-right: 1px solid var(--border);
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+  overflow-x: hidden;
+}
+
+.sidebar-section {
+  margin-bottom: 1rem;
+}
+
+.sidebar-section-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: var(--surface-light);
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text);
+  transition: background 0.2s ease;
+}
+
+.sidebar-section-header:hover {
+  background: var(--surface-hover);
+}
+
+.section-title {
+  flex-grow: 1;
+  margin-left: 0.5rem;
+}
+
+.sidebar-section-body {
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.chapter-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.chapter-list li {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: background 0.2s ease;
+}
+
+.chapter-list li:hover {
+  background-color: var(--surface-hover);
+  color: var(--text);
+}
+
+.chapter-list li.active {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Content area */
+.content {
+  background: var(--bg);
+  padding: 1rem 2rem;
+  overflow-y: auto;
+}
+
+/* Light Theme Variables */
+:root {
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --surface-light: #f1f5f9;
+  --surface-hover: #e2e8f0;
+  --border: #e5e7eb;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --primary: #3b82f6;
+  --primary-light: #dbeafe;
+}
+
+/* Dark Theme Overrides */
+body.dark-mode {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-light: #334155;
+  --surface-hover: #475569;
+  --border: #334155;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --primary: #60a5fa;
+  --primary-light: #1e40af;
+}
+
+/* Ensure the overall layout takes full height */
+.upsc-content-layout {
+  height: calc(100vh - 70px); /* Adjust based on your header/tab height */
+  overflow: hidden;
+}
+
+/* Sidebar scroll area */
+.sidebar {
+  width: 280px;
+  min-width: 240px;
+  max-width: 300px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem;
+  background-color: var(--sidebar-bg, #f9f9f9);
+  border-right: 1px solid #ddd;
+}
+
+/* Collapsed sidebar style */
+.sidebar.collapsed {
+  width: 60px;
+  min-width: 60px;
+  padding: 1rem 0.5rem;
+}
+
+.sidebar-section {
+  margin-bottom: 1rem;
+}
+
+.sidebar-section-body {
+  margin-left: 0.5rem;
+}
+
+.chapter-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.25rem 0;
+}
+
+.chapter-list li {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.chapter-list li:hover {
+  background-color: #e0e0e0;
+}
+
+.chapter-list li.active {
+  background-color: #d0e6ff;
+  font-weight: 600;
+}
+
+.sub-section-header {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+}
+
+.sub-section-header:hover {
+  background-color: #e8e8e8;
+}
+
+/* Ensure content doesn't scroll with sidebar */
+.content {
+  overflow-y: auto;
+  height: 100%;
+}
+.sub-section-header {
+  padding: 0.3rem 0.5rem;
+  background-color: var(--surface-light);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sub-section-header:hover {
+  background-color: var(--surface-hover);
+}
+
+/* Ensure full height layout */
+.upsc-content-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabs on top */
+.subject-tabs {
+  background-color: var(--bg-primary, #fff);
+  border-bottom: 1px solid #ccc;
+  z-index: 10;
+}
+
+/* Layout below the tabs */
+.upsc-content-layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar scrolls independently */
+.sidebar {
+  width: 280px;
+  min-width: 240px;
+  max-width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  background-color: var(--sidebar-bg, #f9f9f9);
+}
+
+/* When collapsed */
+.sidebar.collapsed {
+  width: 60px;
+  min-width: 60px;
+  padding: 1rem 0.5rem;
+}
+
+/* Scrollable main content */
+.content {
+  flex-grow: 1;
+  overflow-y: auto;
+  height: 100%;
+  padding: 1rem;
+}
+
+/* Expand/collapse styles */
+.sub-section-header {
+  padding: 0.3rem 0.5rem;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0.25rem;
+}
+
+.sub-section-header:hover {
+  background-color: #e8e8e8;
+}
+
+.chapter-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+}
+
+.chapter-list li {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.chapter-list li:hover {
+  background-color: #e0e0e0;
+}
+
+.chapter-list li.active {
+  background-color: #cce5ff;
+  font-weight: 600;
+}
+/* Modern Scrollbar Styling (Webkit) */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #bbb, #888);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Firefox Scrollbar */
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+/* Optional hover effect for thumb */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #999, #666);
+}
+
+/* Dark Mode Scrollbar Support */
+body.dark-mode .sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #555, #333);
+}
+body.dark-mode .sidebar {
+  scrollbar-color: #444 transparent;
+}

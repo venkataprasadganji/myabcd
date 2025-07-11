@@ -1,0 +1,122 @@
+.syllabus-section-card.prelims {
+  background: linear-gradient(135deg, #f0faff, #e6f7ff);
+  border-left: 5px solid #0dcaf0;
+}
+
+.syllabus-section-card.mains {
+  background: linear-gradient(135deg, #fff5e6, #fff0d6);
+  border-left: 5px solid #ffc107;
+}
+
+.syllabus-list li.remembered label {
+  color: #28a745;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.accordion-button::after {
+  transform: scale(1.1);
+}
+
+.accordion-item {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.progress-bar {
+  font-size: 0.75rem;
+}
+.syllabus-point-item {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  transition: all 0.2s ease;
+  margin-bottom: 6px;
+}
+
+.syllabus-point-item:hover {
+  background-color: #eef4ff;
+}
+
+.syllabus-point-item.remembered {
+  background-color: #e6ffed;
+  color: #333;
+  font-weight: 500;
+}
+
+.dark-mode .syllabus-point-item {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .syllabus-point-item:hover {
+  background-color: #333;
+}
+
+.dark-mode .syllabus-point-item.remembered {
+  background-color: #204c2d;
+  color: #d2f8d2;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .syllabus-tabs-wrapper {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+}
+
+body.dark-mode .nav-tabs .nav-link {
+  color: #ccc;
+  background: transparent;
+  border: none;
+}
+
+body.dark-mode .nav-tabs .nav-link.active {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #333;
+}
+
+body.dark-mode .tab-content {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+body.dark-mode .syllabus-card {
+  background: linear-gradient(135deg, #222, #2a2a2a);
+  color: #eee;
+  border-left: 4px solid #444;
+}
+
+body.dark-mode .syllabus-point-item {
+  background-color: #2d2d2d;
+  color: #ccc;
+}
+
+body.dark-mode .syllabus-point-item:hover {
+  background-color: #383838;
+}
+
+body.dark-mode .syllabus-point-item.remembered {
+  background-color: #2f5f2f;
+  color: #c3fccc;
+}
+
+body.dark-mode .progress {
+  background-color: #333;
+}
+
+body.dark-mode .progress-bar {
+  background-image: linear-gradient(to right, #36d399, #0fcf98);
+}
+
+body.dark-mode .quote-box {
+  background-color: #232323;
+  color: #dcdcdc;
+  border-left: 4px solid #ffd700;
+}

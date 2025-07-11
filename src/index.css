@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.progress-bar.bg-info {
+  background-image: linear-gradient(to right, #38bdf8, #0ea5e9);
+}
+.progress-bar.bg-warning {
+  background-image: linear-gradient(to right, #facc15, #fbbf24);
+}
+.progress-bar.bg-success {
+  background-image: linear-gradient(to right, #4ade80, #22c55e);
+}
+
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

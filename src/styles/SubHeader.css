@@ -1,0 +1,77 @@
+/* SubHeader Container */
+.subheader {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid transparent;
+  position: sticky;
+height:56px;
+  z-index: 10;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Title & Description */
+.subheader-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212529; /* Light Mode Default */
+}
+
+.subheader-desc {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 2px;
+}
+
+/* Button Style - Soft Gradient */
+.subheader button {
+  border: none;
+  padding: 0.4rem 1.2rem;
+  font-weight: 500;
+  color: #340463;
+  background: linear-gradient(145deg, #ecd6e8, #ca89e4);
+  border-radius: 50px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease, box-shadow 0.2s ease;
+}
+
+.subheader button:hover {
+  background: linear-gradient(145deg, #e2e6ea, #d4d8db);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 🌙 Dark Mode */
+body.dark-mode .subheader {
+  background: #1f1f2e;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .subheader-title {
+  color: #ffffff;
+}
+
+body.dark-mode .subheader-desc {
+  color: #cccccc;
+}
+
+body.dark-mode .subheader button {
+  background: linear-gradient(145deg, #2c2f3f, #3a3f52);
+  color: #ffffff;
+  border: 1px solid #4b4f61;
+}
+
+body.dark-mode .subheader button:hover {
+  background: linear-gradient(145deg, #3a3f52, #4b4f61);
+}
+
+.subheader-icon {
+  font-size: 1.2rem;
+  color: #0d6efd; /* Bootstrap Primary */
+}
+
+body.dark-mode .subheader-icon {
+  color: #66b2ff;
+}

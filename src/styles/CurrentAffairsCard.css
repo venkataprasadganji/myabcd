@@ -1,0 +1,101 @@
+.ca-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  margin: 20px auto;
+  padding: 20px 24px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease;
+}
+
+.ca-card:hover {
+  transform: translateY(-4px);
+}
+
+.ca-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.ca-topic {
+  background-color: #1e88e5;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ca-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.ca-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  
+  
+}
+
+.ca-title a {
+  text-decoration: none;
+  color: #1a237e;
+
+}
+
+.ca-title a:hover {
+  text-decoration: underline;
+}
+
+.ca-summary {
+  color: #333;
+  line-height: 1.5;
+    
+}
+
+.ca-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.ca-tag {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.ca-section {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.ca-section h4 {
+  font-size: 1rem;
+  color: #0d47a1;
+  margin-bottom: 8px;
+}
+
+.ca-mcq-list,
+.ca-mains-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.ca-mcq-list li,
+.ca-mains-list li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}

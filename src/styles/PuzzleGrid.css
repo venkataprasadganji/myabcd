@@ -1,0 +1,117 @@
+.puzzle-container {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+  transition: background 0.3s;
+}
+
+.puzzle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.selectors select {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  background-color: var(--bs-light);
+  border: 1px solid #ccc;
+  margin-right: 8px;
+}
+
+.memory-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+/* Toggle switch style */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider.round {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+.slider.round::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider.round {
+  background-color: #4caf50;
+}
+
+.switch input:checked + .slider.round::before {
+  transform: translateX(18px);
+}
+
+/* Puzzle Grid Tiles */
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.puzzle-tile {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 16px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e1e1e1;
+  font-size: 0.95rem;
+}
+
+.puzzle-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.puzzle-tile.remembered {
+  background: linear-gradient(135deg, #d2fbd4, #c2f1c5);
+  color: #235e23;
+  border: 1px solid #99e6a0;
+}
+
+/* Dark Mode */
+body.dark-mode .puzzle-tile {
+  background: rgba(40, 40, 40, 0.9);
+  color: #eee;
+  border-color: #444;
+}
+
+body.dark-mode .puzzle-tile.remembered {
+  background: linear-gradient(135deg, #2d6f2e, #214d26);
+  color: #c0ffc0;
+}

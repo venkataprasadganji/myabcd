@@ -1,0 +1,55 @@
+.flashcard-wrapper {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.controls select {
+  padding: 6px 10px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.card-stack {
+  position: relative;
+  height: 300px;
+}
+
+.card-content {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #e3f2fd, #d1ecf1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transform: translateY(calc(var(--i) * 6px)) scale(calc(1 - var(--i) * 0.015));
+  z-index: calc(100 - var(--i));
+  transition: all 0.25s ease;
+}
+
+.no-more-cards {
+  text-align: center;
+  padding: 60px 10px;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+body.dark-mode .card-content {
+  background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+  color: #eee;
+}
